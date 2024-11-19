@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#numero1,  #numero2{
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+
+}
+    
+.calc{
+    text-align: center;
+    margin:100px auto;
+    border:  2px solid black;
+    padding: 30px;
+    max-width: 600px;
+}
+h1{
+    margin: 100px auto;
+    max-width: 600px;
+     
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+#res{
+    padding: 20px;
+    margin: 20px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(149, 152, 154);
+}
+
+#enviar{
+    margin: auto;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 190px;   
+    max-width:300px;
+}
+#enviar:hover{
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 12px;
+    transition: all 0.4s;
+}
+
+.caixaTexto{
+    margin: auto 50px;
+    padding: 20px;
+    color: rgb(112, 113, 113);
+}
+
+
+@media (max-width: 768px) {
+    .calc {
+        padding: 20px;
+        border-width: 1px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #enviar {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .caixaTexto {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calc {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    #enviar {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .caixaTexto {
+        font-size: 0.8rem;
+    }
+
+    #numero1, #numero2 {
+        padding: 8px;
+    }
+
+    #res {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+    </style>
+    <title>Somando Dois Números com Html</title>
+    
+</head>
+<body>
+
+        <h1>Somando Dois Números com HTML</h1>
+
+    <div class="calc">
+
+        <div class="caixaTexto">
+            "O objetivo do exercicio é fazer um programa que faça uma soma entre dois numero escolhidos pelo usuário"
+        </div>
+   
+        <input type="number" placeholder="Digíte um número" name="" id="numero1">
+            <br> + <br>
+        <input type="number" placeholder="Digíte um número" name="" id="numero2">
+            <br>
+        <button id="enviar" onclick="somar()">Somar os Números</button>
+        
+        <div id="res">O resultado deve aparecer aqui!</div>
+
+    </div>
+    <script>
+         
+         function somar(){
+            let n1 = Number(document.getElementById("numero1").value);
+            let n2 = Number(document.getElementById("numero1").value);
+            let soma = n1 + n2; 
+        
+            document.getElementById("res").innerHTML = "O resultado da soma é: " + soma;
+        }
+    </script>
+    
+</body>
+</html>
